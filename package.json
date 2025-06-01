@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "formidable": "^3.5.4",
+    "next": "15.3.2",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.2.133",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
-    "@eslint/eslintrc": "^3"
+    "null-loader": "^4.0.1",
+    "postcss": "^8.5.3",
+    "raw-loader": "^4.0.2",
+    "tailwindcss": "^3.4.17"
   }
 }

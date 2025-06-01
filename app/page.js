@@ -1,95 +1,98 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      {/* Header */}
+      <header className="w-full flex items-center px-8 py-4 bg-transparent">
+        <div className="flex items-center">
+          <div style={{ width: '240px', height: '120px', position: 'relative' }}>
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.png"
+              alt="Document Analyzer Logo"
+              fill
+              className="object-contain"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+      {/* Hero Section */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="pt-16 pb-8 text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            One App to Score and Improve Your Job and School Documents
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            From resumes and cover letters to essays and reports — get instant feedback, clear scores, and fixes that actually make a difference.
+          </p>
+          <Link 
+            href="/analyze"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+          >
+            Try It Free — Upload Your Document
+          </Link>
+        </div>
+        {/* Features Section */}
+        <div className="py-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What It Does</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-blue-600 text-4xl mb-4">📄</div>
+              <h3 className="text-xl font-semibold mb-2">Upload Documents</h3>
+              <p className="text-gray-600">Upload your resume, cover letter, essay, or assignment</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-blue-600 text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold mb-2">Get Instant Scores</h3>
+              <p className="text-gray-600">Instantly receive a score out of 100</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-blue-600 text-4xl mb-4">📝</div>
+              <h3 className="text-xl font-semibold mb-2">Detailed Summary</h3>
+              <p className="text-gray-600">Get a concise summary of strengths and weaknesses</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-blue-600 text-4xl mb-4">💡</div>
+              <h3 className="text-xl font-semibold mb-2">Actionable Suggestions</h3>
+              <p className="text-gray-600">Follow specific suggestions to improve your writing</p>
+            </div>
+          </div>
+        </div>
+        {/* Target Audience Section */}
+        <div className="py-16 bg-white rounded-2xl shadow-lg mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Who It's For</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+            <div className="flex items-start space-x-4">
+              <div className="text-4xl">🎓</div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Students</h3>
+                <p className="text-gray-600">Get actionable feedback to help you learn and grow as a writer. Understand your strengths and areas for improvement in every assignment.</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="text-4xl">💼</div>
+        <div>
+                <h3 className="text-xl font-semibold mb-2">Job Seekers</h3>
+                <p className="text-gray-600">Boost your application performance with professional feedback on your resumes and cover letters</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* CTA Section */}
+        <div className="text-center pb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Improve Your Documents?</h2>
+          <Link 
+            href="/analyze"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+          >
+            Try It Free — Upload Your Document
+          </Link>
+        </div>
+    </main>
     </div>
   );
 }
