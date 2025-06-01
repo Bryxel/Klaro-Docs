@@ -18,9 +18,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/eslint-plugin-next": "^15.3.2",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "eslint-plugin-react": "^7.33.2",
     "null-loader": "^4.0.1",
     "postcss": "^8.5.3",
     "raw-loader": "^4.0.2",
