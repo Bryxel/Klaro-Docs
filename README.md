@@ -1,4 +1,4 @@
-# Document Analyzer
+# Klaro Docs: Document Analyzer
 
 A Next.js application that analyzes documents using Google's Gemini AI. Upload your PDF documents to get instant feedback, scores, and improvement suggestions.
 
