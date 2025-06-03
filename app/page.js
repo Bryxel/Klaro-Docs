@@ -7,15 +7,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Header */}
-      <header className="w-full flex items-center px-8 py-4 bg-transparent">
+      <header className="w-full flex items-center px-4 sm:px-8 py-4 bg-transparent">
         <div className="flex items-center">
-          <div style={{ width: '240px', height: '120px', position: 'relative' }}>
+          <div className="w-[120px] h-[60px] sm:w-[180px] sm:h-[90px] md:w-[240px] md:h-[120px] relative">
             <Image
               src="/logo.png"
               alt="Document Analyzer Logo"
               fill
               className="object-contain"
               priority
+              sizes="(max-width: 640px) 120px, (max-width: 768px) 180px, 240px"
             />
           </div>
         </div>
