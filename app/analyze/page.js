@@ -49,21 +49,22 @@ export default function AnalyzePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <main className="p-8 max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-12">
+      <main className="p-4 sm:p-8 max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 mb-8 sm:mb-12">
           <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             <span>Back to Home</span>
           </Link>
-          <div className="w-[120px] h-[60px] sm:w-[180px] sm:h-[90px] md:w-[240px] md:h-[120px] relative">
+          <div className="w-[100px] h-[50px] sm:w-[180px] sm:h-[90px] md:w-[240px] md:h-[120px] relative">
             <Image
               src="/logo.png"
               alt="Document Analyzer Logo"
               fill
               className="object-contain"
-              sizes="(max-width: 640px) 120px, (max-width: 768px) 180px, 240px"
+              sizes="(max-width: 640px) 100px, (max-width: 768px) 180px, 240px"
+              priority
             />
           </div>
         </div>
