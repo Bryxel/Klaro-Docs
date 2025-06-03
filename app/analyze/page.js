@@ -57,12 +57,13 @@ export default function AnalyzePage() {
             </svg>
             <span>Back to Home</span>
           </Link>
-          <div className="relative w-48 h-48">
+          <div className="w-[120px] h-[60px] sm:w-[180px] sm:h-[90px] md:w-[240px] md:h-[120px] relative">
             <Image
               src="/logo.png"
               alt="Document Analyzer Logo"
               fill
               className="object-contain"
+              sizes="(max-width: 640px) 120px, (max-width: 768px) 180px, 240px"
             />
           </div>
         </div>
